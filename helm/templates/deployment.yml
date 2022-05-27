@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: {{ include "argo-test-app.fullname" . }}
 spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 3
+  replicas: {{ .Values.replicas }}
   template:
     metadata:
       labels:

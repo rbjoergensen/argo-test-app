@@ -1,0 +1,4 @@
+nameOverride: argo-test-app
+fullnameOverride: argo-test-app
+
+replicas: 3
