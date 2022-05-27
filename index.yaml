@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  argo-test-app:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-05-27T12:57:51.042855777Z"
+    description: Application for testing ArgoCD
+    digest: 4a14d61de359a062ba187690a47b629c5c34007e0a81664a3e418f12460c9378
+    name: argo-test-app
+    type: application
+    urls:
+    - https://github.com/rbjoergensen/argo-test-app/releases/download/argo-test-app-0.0.1/argo-test-app-0.0.1.tgz
+    version: 0.0.1
+generated: "2022-05-27T12:57:51.047080731Z"
