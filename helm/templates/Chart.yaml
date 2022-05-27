@@ -1,6 +1,0 @@
-apiVersion: v2
-name: argo-test-app
-description: Application for testing ArgoCD
-type: application
-version: 0.0.0
-appVersion: 0.0.0
