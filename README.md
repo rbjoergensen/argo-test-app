@@ -1,1 +1,1 @@
-# test-app
+# ArgoCD proof of concepts
