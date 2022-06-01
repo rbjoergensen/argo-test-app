@@ -21,5 +21,13 @@ $ENV:AWS_ACCESS_KEY_ID = $assumeRole.Credentials.AccessKeyId
 $ENV:AWS_SECRET_ACCESS_KEY = $assumeRole.Credentials.SecretAccessKey
 $ENV:AWS_SESSION_TOKEN = $assumeRole.Credentials.SessionToken
 ```
+``` powershell
+helm package helm/templates
+aws ecr create-repository --repository-name argo-test-app --region eu-central-1
+$env:HELM_EXPERIMENTAL_OCI=1
+aws ecr get-login-password --region eu-central-1 | helm registry login --username AWS --password-stdin 181095382557.dkr.ecr.eu-central-1.amazonaws.com/
+helm push argo-test-app-0.0.3.tgz oci://181095382557.dkr.ecr.eu-central-1.amazonaws.com/
+aws ecr describe-images --repository-name argo-test-app --region eu-central-1
+```
 ## Links
 - https://argo-cd.readthedocs.io/en/stable/getting_started/
