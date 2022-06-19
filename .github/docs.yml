@@ -1,0 +1,6 @@
+navigatorName: ArgoCD Sandbox
+category: Terraform
+includeLink: true
+files:
+- file: Readme.md
+  prettyName: Readme
